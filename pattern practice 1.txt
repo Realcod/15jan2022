@@ -1,0 +1,43 @@
+/* Print the following pattern for the given number of rows.
+Note: N is always odd.
+Pattern for N = 5
+    *
+    **
+    ***
+    ****
+    *****
+    ****
+    ***
+    **
+    *
+
+*/
+#include<iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout<<"Enter n";
+    cin >> n;
+    int i = 1;
+    while(i<=(n/2)+1){
+    	int j=1;
+    	while(j<=i){
+    		cout<<"*";
+    		j++;
+		}
+		cout<<endl;
+		i++;
+	}
+	i=1; int val=n/2;
+	while(i<=n/2){
+		int j=1;
+		while(j<=val){
+			cout<<"*";
+			j++;
+		}
+		cout<<endl;
+		i++;
+		val--;
+	}
+}
