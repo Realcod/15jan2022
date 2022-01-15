@@ -1,0 +1,38 @@
+/* Print the following pattern for the given number of rows.
+Pattern for N = 4
+...1
+..232
+.34543
+4567654
+The dots represent spaces.
+*/
+#include<iostream>
+using namespace std;
+
+int main(){
+	int n;
+	cout<<"Enter n"<<endl;
+	cin>>n;
+
+	int i=1,j;
+	while(i<=n){
+	  int k=1;
+	  while(k<=n-i+1){
+	  	cout<<" ";
+	  	k++;
+	  }
+	  j=1;int val=i;
+	  while(j<=i){
+	  	cout<<val;
+	  	val++;
+	  	j++;
+	  }
+	  j=2*i-2;
+	  while(j>=i){
+	  	cout<<j;
+	  	j--;
+	  }
+		cout<<endl;
+		i++;
+	}
+}
